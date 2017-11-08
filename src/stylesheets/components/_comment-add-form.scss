@@ -1,0 +1,27 @@
+@import "../../stylesheets/helpers/all";
+
+@include bem-block(comment-add) {
+  position: relative;
+  background-color: #fff;
+  padding: 24px;
+  margin-bottom: 4px;
+
+  @include bem-element(form) {
+    @extend %layer-flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include bem-element(input) {
+    border: 0;
+    outline: none;
+    flex: 1;
+
+    &.input {
+      font-family: merge-fonts-stack('Ubuntu', $fonts-stack);
+    }
+  }
+
+  @include bem-element(submit-button) {
+  }
+}
